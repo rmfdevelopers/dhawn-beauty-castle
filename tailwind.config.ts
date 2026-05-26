@@ -4,9 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#FF1493",
-        secondary: "#FADADD",
-        accent: "#1A1A1A"
+        primary: "#FCE4EC",
+        secondary: "#D81B60",
+        accent: "#2D0C1E"
       },
       fontFamily: {
         heading: ["Playfair Display"],
