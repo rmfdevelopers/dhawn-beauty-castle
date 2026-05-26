@@ -1,31 +1,31 @@
-import type { Metadata } from "next";
-import { Cormorant_Garamond, Outfit } from "next/font/google";
-import "./globals.css";
+import { Playfair_Display, Outfit } from 'next/font/google';
+import './globals.css';
 
-const heading = Cormorant_Garamond({ 
-  subsets: ["latin"], 
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-heading" 
+const headingFont = Playfair_Display({ 
+  subsets: ['latin'], 
+  variable: '--font-heading',
+  weight: ['400', '700', '900']
 });
 
-const body = Outfit({ 
-  subsets: ["latin"], 
-  variable: "--font-body" 
+const bodyFont = Outfit({ 
+  subsets: ['latin'], 
+  variable: '--font-body',
+  weight: ['300', '400', '600']
 });
 
-export const metadata: Metadata = {
-  title: "Dhawn Beauty Castle | Bespoke Skincare for Melanin Skin",
-  description: "Specializing in acne recovery, hyperpigmentation, and radiant evening of skin tone for melanin-rich skin.",
+export const metadata = {
+  title: 'Dhawn Beauty Castle | Radiant Skin for Melanin',
+  description: 'Expertly formulated skincare for melanin-rich skin correcting acne and hyperpigmentation.',
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={`${heading.variable} ${body.variable} font-sans antialiased`}>
+      <body className={`${headingFont.variable} ${bodyFont.variable} font-sans`}>
         {children}
       </body>
     </html>
