@@ -1,7 +1,7 @@
 import './globals.css';
-import { Inter, Playfair_Display } from 'next/font/google';
+import { Playfair_Display, Outfit } from 'next/font/google';
 const h = Playfair_Display({ subsets: ['latin'], variable: '--font-h' });
-const b = Inter({ subsets: ['latin'], variable: '--font-b' });
+const b = Outfit({ subsets: ['latin'], variable: '--font-b' });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
